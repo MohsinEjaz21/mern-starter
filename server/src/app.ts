@@ -53,11 +53,8 @@ class App {
     } = process.env;
     mongoose.connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_PATH}`)
       .then(() => {
-        console.log('MongoDB Connected')
         let { db } = mongoose.connection;
-        console.log("db.databaseName 🌈", db.databaseName
-        )
-
+        console.log(`MongoDB Connected with 🌈 ${db.databaseName} `)
       }).catch((err: any) => {
         console.log('MongoDB Connection Error. Please make sure that MongoDB is running. ' + err);
       });

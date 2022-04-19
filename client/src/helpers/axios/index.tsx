@@ -1,7 +1,3 @@
-export default function Index() {
-  return (
-    <>
-    
-    </>
-  )
-}
+import post from './post';
+
+export default { post };
