@@ -17,7 +17,7 @@ function App() {
     const response = await axios({
       headers: { 'Content-Type': 'application/json' },
       method: 'post',
-      url: 'http://localhost:1337/api/register',
+      url: 'http://localhost:1337/auth/register',
       data: payload
     })
     const data = response.data;
